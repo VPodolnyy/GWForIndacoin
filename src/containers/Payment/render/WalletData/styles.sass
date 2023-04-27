@@ -1,0 +1,76 @@
+.WalletData
+  display: flex
+  flex-direction: column
+  .WalletData__header
+    display: flex
+    flex-direction: column
+    .Wallet__img
+      display: var(--Visible-ContactImg)
+      align-self: center
+      margin: 10px 0 30px
+    h3
+      font-weight: 400
+      font-size: 24px
+      line-height: 33px
+      margin-bottom: 32px
+      color: var(--ContainerHeader)
+  input
+    border-radius: 8px
+  .cpcWallet
+    margin-top: 10px
+    color: var(--Color7)
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  .WalletData__Networks
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 24px
+    span
+      font-weight: 400
+      font-size: 18px
+      line-height: 25px
+      color: var(--BaseText)
+    .networksList
+      background: var(--Networks-Background)
+      border: 1px solid var(--Networks-Border)
+      border-radius: 13px
+      padding: 8px !important
+      display: flex
+      width: fit-content
+      align-self: self-end
+      justify-content: center
+      list-style-type: none
+      &:not(&:last-child)
+        margin-right: 8px
+        li
+          color: var(--Text)
+          font-weight: 500
+          font-size: 12px
+          line-height: 15px
+          padding: 5px
+          cursor: pointer
+          &.networkActive
+            background: var(--Networks-Active-Background)
+            color: var(--Networks-Active-color)
+            border-radius: 6px
+            cursor: inherit
+  .WalletData__SkipAddress
+    display: flex
+    flex-direction: column
+    text-align: center
+    gap: 15px
+    margin-top: 10px
+@media (max-width: 420px)
+  .WalletData
+    .WalletData__header
+      flex-direction: column-reverse
+      h3
+        font-size: 22px
+        line-height: 30px
+        margin-bottom: 0
+    .WalletData__Networks
+      span
+        font-size: 14px
+        line-height: 19px

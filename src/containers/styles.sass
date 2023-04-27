@@ -1,0 +1,153 @@
+.mainContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 1168px
+  padding: 0 48px
+  height: 100%
+  min-height: 840px
+  transition: width 2s
+  main
+    position: relative
+    display: flex
+    flex: 1 0 auto
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    z-index: 2
+    .info
+      height: 100%
+      max-height: 628px
+      max-width: 450px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      gap: 32px
+      h1
+        font-family: DrukWide
+        font-weight: 700
+        font-size: 48px
+        line-height: 58px
+        color: var(--Text-HeaderMainInfo)
+      p
+        font-weight: 400
+        font-size: 18px
+        line-height: 25px
+        color: var(--Text-SecondMainInfo)
+    .container
+      width: 100%
+      max-width: 488px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 100%
+      transition: left 1s
+      .preview
+        position: fixed
+        height: 100%
+        width: 100%
+        z-index: 100
+        padding: 78px 0 37px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        background: var(--BackgroundPreview)
+        text-align: center
+        .preview__middle, .preview__bottom
+          display: flex
+          flex-direction: column
+          margin: 0 16px
+        .preview__middle
+          gap: 17px
+          h2
+            font-family: DrukWide
+            font-weight: 700
+            font-size: 22px
+            line-height: 33px
+            letter-spacing: -0.01em
+            color: #000000
+          p
+            font-weight: 600
+            font-size: 13px
+            line-height: 18px
+            letter-spacing: -0.03em
+            color: #2D2D2D
+        .preview__bottom
+          button
+            height: 50px
+            font-family: 'DrukWide'
+            font-weight: 700
+            font-size: 18px
+            line-height: 24px
+            margin: 26px 0 12px
+            padding: 0
+            background: #000000
+            border: 2.5px solid #000000
+            &:hover
+              background: #FFFFFF
+              border: 2.5px solid #000000
+          p
+            font-weight: 400
+            font-size: 12px
+            line-height: 18px
+            color: #2D2D2D
+            letter-spacing: -0.03em
+          span
+            font-weight: 400
+            font-size: 12px
+            line-height: 16px
+            color: #626262
+  footer
+    position: relative
+    background: url(../assets/images/FooterBackground.png)
+    background-size: cover
+    background-repeat: no-repeat
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    padding-bottom: 23px
+    flex: 0 0 auto
+    width: 100vw
+    height: 15%
+    .shadowFooter
+      position: absolute
+      bottom: 0
+      height: 25vh
+      width: 100vw
+      background: url(../assets/images/FooterBackgroundShadow.png)
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: bottom
+    p
+      z-index: 1
+      max-width: 1072px
+      font-weight: 600
+      font-size: 12px
+      line-height: 16px
+      color: var(--Text-FooterMainInfo)
+
+::-webkit-scrollbar
+  width: 0px
+  background-color: #f9f9fd
+::-webkit-scrollbar-thumb
+  border-radius: 6px
+  background-color: var(--Color7)
+::-webkit-scrollbar-track
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2)
+  border-radius: 6px
+  background-color: #f9f9fd
+
+@media (max-width: 1024px)
+  .mainContainer
+    main
+      flex-direction: column
+@media (max-width: 760px)
+  .mainContainer
+    padding: 0
+    min-height: initial
+    main
+      .info
+        display: none
+    footer
+      display: none
+// @media (max-width: 500px)

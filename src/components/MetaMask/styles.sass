@@ -1,0 +1,73 @@
+.connectBox
+  display: flex
+  justify-content: end
+  margin-top: 10px
+
+.helpWeb3
+  height: 250px
+  width: 350px
+  div
+    position: relative
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 40px
+    color: var(--Text)
+    svg
+      position: absolute
+      right: 0
+      top: 0
+    span
+      font-size: 24px
+      line-height: 28px
+      text-align: center
+    a
+      background: var(--Color7)
+      border-radius: 13px
+      padding: 10px 20px
+      color: var(--BackgroundContainer)
+      text-decoration: none
+      &:hover
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), var(--Accent) !important
+        cursor: pointer
+
+.walletBlock
+  position: fixed
+  top: 10px
+  right: 10px
+
+.infoWallet
+  background: var(--BackgroundContainer)
+  border: 1px solid var(--Border)
+  display: flex
+  justify-content: start
+  align-items: center
+  padding: 12px
+  cursor: pointer
+  .arrow
+    transition: transform .3s ease-in-out
+    transform-origin: 25% 50%
+    transform: rotate(180deg)
+    &.active
+      transform: rotate(0deg)
+  .shortWallet
+    font-style: normal
+    font-weight: 50
+    font-size: 16px
+    line-height: 19px
+    display: flex
+    align-items: center
+    color: var(--TextPrompt)
+  img
+    padding-right: 9px
+  p
+    margin-right: 9px
+    font-size: 12px
+  &:nth-child(2)
+    &:hover
+      background: var(--BackgroundAccent)
+  &:nth-child(3)
+    &:hover
+      background: var(--BackgroundAccent)

@@ -1,0 +1,41 @@
+.messageBox
+  position: fixed
+  z-index: 10
+  right: 10px
+  top: 10px
+  width: 265px
+  display: flex
+  gap: 10px
+  flex-direction: column
+  .message
+    position: relative
+    width: 100%
+    border-radius: 13px
+    padding: 16px 48px 16px 24px
+    box-shadow: 0px 0px 30px rgba(193, 193, 193, 0.25)
+    overflow: hidden
+    font-size: 16px
+    line-height: 19px
+    z-index: 1
+    &.error
+      border: 1px solid var(--Color9)
+      background-color: #FFDCE0
+      color: var(--Color9)
+      &.info
+        border: 1px solid var(--Color7)
+        background-color: var(--BackgroundAccent)
+    svg
+      position: absolute
+      right: 16px
+      top: 16px
+      cursor: pointer
+@media (max-width: 500px)
+  .messageBox
+    bottom: 65px
+    top: inherit
+    right: 0
+    left: 0
+    margin: 0 auto
+    width: calc(100% - 16px)
+    .message
+      padding: 16px 55px 16px 24px

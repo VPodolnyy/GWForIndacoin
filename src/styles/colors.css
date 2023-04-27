@@ -1,0 +1,108 @@
+html {
+    /* Base */
+    --Color1: #ffffff;
+    --Color2: #DADCE0;
+    --Color3: #515151;
+    --Color4: #000000;
+    --Color5: #666666;
+    --Color6: #F8F8F8;
+    --Color7: #3463f8;
+    --Color8: #898989;
+    --Color9: #ff5a5a;
+    --Color10: #121212;
+    --Color11: #393939;
+  
+    /* General */
+    --Background: var(--Color1);
+    --BackgroundContainer: var(--Color1);
+    --BackgroundPreview: var(--Color1);
+    --ContainerHeader: var(--Color4);
+    --Link: var(--Color7);
+    --BackBackground: rgba(255, 255, 255, 0.75);
+    --MenuOverlay-Background: var(--Color1);
+    --MenuOverlay-Text: var(--Color4);
+    --Shadow-PaymentContainer: 0px 0px 30px rgba(193, 193, 193, 0.25);
+    --Fill-TextLogo-Indacoin: var(--Color4);
+    --BaseText: var(--Color4);
+    --Error: #FF4444;
+
+    /* TextMain */
+    --Text-HeaderMainInfo: var(--Color4);
+    --Text-SecondMainInfo: var(--Color11);
+    --Text-FooterMainInfo: var(--Color1);
+  
+    /* Button */
+    /* Next */
+    --NextButton-Background: var(--Color7);
+    --NextButton-Border: var(--Color7);
+    --NextButton-Text: var(--Color1);
+    --NextButton-Background-Disabled: #c8d2f4;
+    --NextButton-Border-Disabled: #c8d2f4;
+    --NextButton-Background-Hover: transparent;
+    --NextButton-Border-Hover: var(--Color7);
+    --NextButton-Text-Hover: var(--Color7);
+
+    /* Back */
+    --BackButton-Background: var(--Color1);
+    --BackButton-Background-Hover: #EEF2FF;
+    --BackButton-Shadow: 1px 1px 6px rgba(172, 172, 172, 0.25);
+    --BackButton-Arrow: var(--Color7);
+    --BackButton-Arrow-Hover: var(--Color7);
+  
+    /* Input */
+    --Input-Background: var(--Color1);
+    --Input-Border: var(--Color2);
+    --Input-label: var(--Color8);
+    /* Focus */
+    --InputFocus-Background: var(--Color1);
+    --InputFocus-Border: var(--Color7);
+    --InputFocus-label: var(--Color7);
+    /* Valid */
+    --InputValid-Text: var(--Color4);
+    --InputValid-label: var(--Color5);
+    /* Active */
+    --InputActive-label: var(--Color5);
+    /* Error */
+    --InputError-Background: var(--Color1);
+    --InputError-Border: var(--Color9);
+    --InputError-label: var(--Color9);
+    /* Disabled */
+    --InputDisabled-Text: var(--Color4);
+  
+    /* Dropdown */
+    --TextDropdown: var(--Color4);
+    --HeaderDropdown: var(--Color4);
+    --BorderDropdown: var(--Color2);
+    --BackgroundDropdown: var(--Color1);
+    --BackgroundDropdownDiabled: var(--Color2);
+
+    /* infoYouPay */
+    --InfoYouPay-Background: var(--Color6);
+    --InfoYouPay-Border: var(--Color2);
+    --InfoYouPay-Text: var(--Color4);
+  
+    /* Networks */
+    --Networks-Background: var(--Color6);
+    --Networks-Border: var(--Color2);
+    --Networks-Active-Background: var(--Color7);
+    --Networks-Active-color: var(--Color1);
+
+    /* Image */
+    --Visible-ContactImg: block;
+
+    /* Hint */
+    --Hint-Background: var(--Color1);
+    --Hint-Text: var(--Color4);
+
+    /* Help */
+    --Help-QuestionIcon: var(--Color7);
+    --Help-BackIcon: var(--Color4);
+    --Help-Header: var(--Color4);
+
+    /* Icon */
+    --Icon-Color: var(--Color4);
+    --Icon-Email: var(--Icon-Color);
+    --Icon-Wallet: var(--Icon-Color);
+    --Icon-Card: var(--Icon-Color);
+    --Icon-Status: var(--Icon-Color);
+}

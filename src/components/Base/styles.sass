@@ -1,0 +1,184 @@
+.button
+    position: relative
+    border: 0
+    font-family: DrukWide
+    font-weight: 700
+    font-size: 18px
+    line-height: 25px
+    outline: 0
+    cursor: pointer
+    flex: 1 0 auto
+    border-radius: 8px
+    transition: background .3s
+    &.white
+        position: relative
+        background: var(--BackButton-Background)
+        box-shadow: var(--BackButton-Shadow)
+        max-height: 56px
+        max-width: 64px
+        &:hover
+            background: var(--BackButton-Background-Hover)
+        svg
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+    &.filled
+        background: var(--NextButton-Background)
+        border: 2.5px solid var(--NextButton-Border)
+        color: var(--NextButton-Text)
+        padding: 13.5px 0 12.5px
+        min-height: 56px
+        &:disabled
+            background: var(--NextButton-Background-Disabled)
+            border: 2.5px solid var(--NextButton-Border-Disabled)
+            cursor: no-drop
+            &:hover
+                background: var(--NextButton-Background-Disabled)
+                border: 2.5px solid var(--NextButton-Border-Disabled)
+                color: var(--NextButton-Text)
+        &:hover
+            background: var(--NextButton-Background-Hover)
+            border: 2.5px solid var(--NextButton-Border-Hover)
+            color: var(--NextButton-Text-Hover)
+
+.inputBox
+    position: relative
+    width: 100%
+    &:last-child
+        justify-content: end
+    input
+        width: 100%
+        padding: 11px
+        outline: none
+        background: var(--Input-Background)
+        // background: transparent
+        border: 1.5px solid var(--Input-Border)
+        height: 40px
+        &:focus
+            border: 2px solid var(--InputFocus-Border)
+        &:disabled
+            color: var(--InputDisabled-Text)
+        &:valid
+            color: var(--InputValid-Text)
+    label
+        position: absolute
+        left: 0
+        padding: 10px 0 11px 24px
+        pointer-events: none
+        font-size: 16px
+        line-height: 19px
+        color: var(--Input-label)
+        white-space: nowrap
+        text-overflow: ellipsis
+        transition: 0.3s
+    input[type='number']
+        -moz-appearance: textfield
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input:focus + label
+        color: var(--InputFocus-label) !important
+        transform: translateX(-24px) translateY(-34px)
+        font-size: 12px
+    input:valid + label
+        color: var(--InputValid-label)
+        transform: translateX(-24px) translateY(-34px)
+        font-size: 12px
+    &.active
+        label
+            color: var(--InputActive-label)
+            transform: translateX(-24px) translateY(-34px)
+            font-size: 12px
+    &.error
+        input + label
+            color: var(--InputError-label) !important
+        input
+            border: 2px solid var(--InputError-Border) !important
+
+.InputChecked
+    label
+        input
+            position: absolute
+            opacity: 0
+            pointer-events: none
+        div
+            display: flex
+            align-items: center
+            span
+                margin-left: 9px
+                font-weight: 400
+                font-size: 18px
+                line-height: 25px
+                user-select: none
+                color: var(--CheckBox-Text)
+                cursor: pointer
+                a
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 25px
+                    color: var(--Link)
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline
+@media (max-width: 420px)
+    .button
+        &.white
+            max-height: 50px
+            max-width: 50px
+        &.filled
+            padding: 12px 0
+            min-height: 50px
+    .inputBox
+        label
+            padding: 13px 0 13px 16px
+    .InputChecked
+        label
+            div
+                align-items: start
+                span
+                    font-size: 16px
+                    line-height: 22px
+                    a
+                        font-size: 16px
+                        line-height: 22px
+.button
+    .barsLoader
+        position: absolute
+        display: flex
+        justify-content: space-between
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 50%
+        height: 70%
+        span
+            display: block
+            width: 2px
+            border-radius: 1px
+            height: 100%
+            background: var(--Color7)
+            animation: bars 1s infinite
+            &:nth-child(6)
+                animation-delay: -0s
+            &:nth-child(5)
+                animation-delay: -0.1s
+            &:nth-child(4)
+                animation-delay: -0.2s
+            &:nth-child(3)
+                animation-delay: -0.3s
+            &:nth-child(2)
+                animation-delay: -0.4s
+            &:nth-child(1)
+                animation-delay: -0.5s
+        @keyframes bars
+            0%
+                transform: scale(1)
+            50%
+                transform: scale(1, 0.3)
+                opacity: 0.4
+            100%
+                transform: scale(1)

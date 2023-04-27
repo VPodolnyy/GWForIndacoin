@@ -1,0 +1,81 @@
+.additionalMenu
+    position: absolute
+    background-color: var(--BackBackground)
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    .additionalMenu__сontainer
+      position: absolute
+      z-index: 100
+      display: flex
+      flex-direction: column
+      padding: 24px
+      background-color: var(--BackgroundContainer)
+      box-shadow: var(--Shadow-PaymentContainer)
+      height: 100%
+      width: 70%
+      max-width: 258px
+      right: 0%
+      gap: 32px
+      animation: slidein
+      animation-duration: 0.3s
+      @keyframes slidein
+        from
+          right: -100%
+        to
+          right: 0%
+      h3
+        position: relative
+        font-weight: 400
+        font-size: 18px
+        line-height: 25px
+        margin-bottom: 47px
+        text-align: center
+        color: var(--ContainerHeader)
+        svg
+          position: absolute
+          left: 0
+          top: 5px
+          cursor: pointer
+      button
+        padding: 12px 42px
+        border-radius: 8px
+        border: none
+        display: flex
+        align-items: center
+        text-align: start
+        gap: 18px
+        cursor: pointer
+        span
+          font-weight: 600
+          font-size: 18px
+          line-height: 22px
+          color: #fff
+      .cancelPayment
+        border: 2.5px solid var(--Error)
+        background: var(--Error)
+        svg
+          min-width: 24px
+        &:hover
+          background: var(--BackgroundContainer)
+          svg
+            fill: var(--BackgroundContainer)
+            path
+              stroke: var(--Error)
+          span
+            color: var(--Error)
+      .supportCall
+        background: var(--Color7)
+        border: 2.5px solid var(--Color7)
+        svg
+          min-width: 24px
+        &:hover
+          background: var(--BackgroundContainer)
+          svg
+            path
+              fill: var(--Color7)
+          span
+            color: var(--Color7)

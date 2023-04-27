@@ -1,0 +1,96 @@
+.orderData
+  display: flex
+  flex-direction: column
+  gap: 16px
+  .orderData__currencyes
+    display: flex
+    flex-direction: column
+    gap: 16px
+  .orderData__priceOeCrypto
+    font-weight: 400
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    color: #666666
+  .orderData__errorConverter
+    font-weight: 400
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    color: var(--Error)
+  .orderData__infoYouPay
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 1.5px solid var(--InfoYouPay-Border)
+    border-radius: 13px
+    background: var(--InfoYouPay-Background)
+    padding: 13px 24px
+    span
+      font-weight: 400
+      font-size: 18px
+      line-height: 25px
+      color: var(--InfoYouPay-Text)
+      b
+        font-weight: 600
+    .hint
+      cursor: pointer
+      position: relative
+      span
+        display: none
+      &:hover
+        span
+          display: block
+          position: absolute
+          z-index: 1
+          right: -24px
+          padding: 8px 16px
+          width: 248px
+          font-weight: 400
+          font-size: 13px
+          line-height: 18px
+          background: var(--Hint-Background)
+          box-shadow: 0px 0px 8px var(--Color7)
+          border-radius: 8px
+          color: var(--Hint-Text)
+          top: 46px
+          &::after
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            border: 18px solid transparent
+            border-bottom-color: var(--Hint-Background)
+            background: transparent
+            top: -29%
+            right: 13px
+          &.abroad
+            top: -30px
+            right: 35px
+            &::after
+              right: -35px
+              top: 20px
+              border-left-color: var(--Hint-Background)
+              border-bottom-color: transparent
+  .orderData__buttonBlock
+    display: flex
+    justify-content: space-between
+    margin-top: 24px
+@media (max-width: 420px)
+  .orderData
+    padding: 0
+    box-shadow: none
+    .orderData__priceOeCrypto,
+    .orderData__errorConverter
+      font-size: 14px
+      line-height: 19px
+    .orderData__infoYouPay
+      span
+        font-size: 11px
+        line-height: 15px
+        b
+          font-size: 11px
+          line-height: 15px
+@media (max-width: 500px)
+  .orderData
+    padding: 0

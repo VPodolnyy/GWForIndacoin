@@ -1,0 +1,83 @@
+.paymentInput
+  display: flex
+  height: 109px
+  padding: 37px 24px 7px
+  border: 1.5px solid var(--Input-Border)
+  background: var(--Input-Background)
+  border-radius: 8px
+  align-items: center
+  &.error
+    border: 1.5px solid var(--Error)
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+  .inputBox
+    position: relative
+    width: 100%
+    &:last-child
+      justify-content: end
+    input
+      width: 100%
+      outline: none
+      border: none
+      height: 52px
+      font-weight: 400
+      font-size: 48px
+      line-height: 65px
+      background: transparent
+      &:disabled
+        background: none
+        color: var(--InputDisabled-Text)
+      &:valid
+        color: var(--InputValid-Text)
+    label
+      position: absolute
+      left: 0
+      padding: 10px 0 11px 12px
+      pointer-events: none
+      font-weight: 400
+      font-size: 18px
+      line-height: 25px
+      color: var(--Input-label)
+      white-space: nowrap
+      text-overflow: ellipsis
+      transition: 0.3s
+      input[type='number']
+        -moz-appearance: textfield
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+    input:focus + label
+      color: var(--InputFocus-label) !important
+      transform: translateX(-10px) translateY(-40px)
+    input:valid + label
+      color: var(--InputValid-label)
+      transform: translateX(-10px) translateY(-40px)
+    &.active
+      label
+        color: var(--InputActive-label)
+        transform: translateX(-10px) translateY(-40px)
+    &.error
+      input + label
+        color: var(--InputError-label) !important
+@media (max-width: 420px)
+  .paymentInput
+    height: 85px
+    padding: 36px 12px 9px 16px
+    .inputBox
+      input
+        font-size: 28px
+        line-height: 27px
+      label
+        font-weight: 600
+        font-size: 12px
+        line-height: 17px
+      input:focus + label
+        transform: translateX(-10px) translateY(-25px)
+      input:valid + label
+        transform: translateX(-10px) translateY(-25px)
+      &.active
+        label
+          transform: translateX(-10px) translateY(-25px)

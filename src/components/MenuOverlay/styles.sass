@@ -1,0 +1,122 @@
+.dropMenu
+  border: 1px solid var(--BorderDropdown)
+  background: var(--BackgroundDropdown)
+  border-radius: 8px
+  height: 40px
+  padding: 12px
+  display: flex
+  align-items: center
+  gap: 8px
+  cursor: pointer
+  &.disabled
+    background: var(--BackgroundDropdownDiabled)
+  > img
+    border-radius: 13px
+    .arrow
+      margin: 0 !important
+  span
+    color: var(--TextDropdown)
+    font-weight: 400
+    font-size: 18px
+    line-height: 20px
+.blackBack
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  background: var(--BackBackground)
+  .dropdown
+    position: absolute
+    transition: height 0.15s ease-out
+    background: var(--MenuOverlay-Background)
+    box-shadow: 0px 0px 10px var(--Color7)
+    border-radius: 13px 13px 0 0
+    display: flex
+    flex-direction: column
+    padding: 15px 3px 0px
+    z-index: 2
+    left: 0
+    top: 15%
+    height: 85%
+    margin: auto 10px
+    width: calc(100% - 20px)
+    // animation: slidein
+    // animation-duration: 0.1s
+    @keyframes slidein
+      from
+        top: 100%
+      to
+        top: 15%
+    .searchBox
+      padding: 0 15px
+      display: flex
+      flex-direction: column
+      > span
+        font-size: 22px
+        line-height: 24px
+        text-align: center
+        margin-bottom: 20px
+        color: var(--MenuOverlay-Text)
+      input
+        border-radius: 13px !important
+        background: var(--Input-Background) !important
+        border: 1px solid var(--Input-Border) !important
+        height: 40px !important
+        padding: 11px !important
+        font-size: 24px !important
+        
+    menu
+      overflow-y: auto
+      overflow-x: hidden
+      width: 100%
+      margin-top: 10px
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 10px
+      padding: 10px 0 10px 10px
+      @media (max-width: 500px)
+        grid-template-columns: 1fr 1fr 1fr
+      @media (max-width: 400px)
+        grid-template-columns: 1fr 1fr
+      > li
+        display: flex
+        align-items: center
+        text-decoration: none
+        position: relative
+        cursor: pointer
+        color: var(--MenuOverlay-Text)
+        img
+          margin-right: 10px
+          border-radius: 13px
+          .textBox
+            display: flex
+            flex-direction: column
+            > span
+              font-size: 14px
+              line-height: 17px
+              color: var(--Text)
+              > p
+                font-size: 12px
+                line-height: 15px
+                color: var(--TextPrompt)
+      > li::after
+        content: ''
+        position: absolute
+        bottom: -3px
+        left: 0
+        width: 100%
+        height: 0.1em
+        background-color: var(--Color7)
+        opacity: 0
+        transition: opacity 300ms, transform 300ms
+      > li:hover::after,
+      li:focus::after
+        opacity: 1
+        transform: translate3d(0, 0.2em, 0)
+@media (max-width: 760px)
+  .blackBack
+    position: fixed

@@ -1,0 +1,89 @@
+{
+  "73": {
+    "curTo": [],
+    "curOut": [],
+    "partnerId": "",
+    "colorsSettings": {
+      "Color7": "#358882",
+      "NextButton-Background-Disabled":"#B8DEDB",
+      "NextButton-Border-Disabled":"#B8DEDB"
+    }
+  },
+  "76": {
+    "curTo": [],
+    "curOut": [],
+    "partnerId": "",
+    "colorsSettings": {
+      "Color7": "#ff0057",
+      "NextButton-Background-Disabled":"linear-gradient(0deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)), #040404",
+      "NextButton-Border-Disabled":"linear-gradient(0deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.58)), #040404",
+      "Background": "#F6F6F6",
+      "BackgroundContainer": "#242424",
+      "MenuOverlay-Background": "#202021",
+
+      "Input-Background": "rgba(0, 0, 0, 0.3)",
+      "InfoYouPay-Background": "rgba(0, 0, 0, 0.3)",
+      "Networks-Background": "rgba(0, 0, 0, 0.3)",
+
+      "BackgroundDropdown": "#363636",
+      "BackgroundDropdownDiabled": "#363636",
+      "BackButton-Background": "#363636",
+      "BackButton-Background-Hover": "transparent",
+      "BackButton-Shadow": "1px 1px 6px rgba(172, 172, 172, 0.25)",
+
+      "Icon-Color": "var(--Color7)",
+
+      "MenuOverlay-Text": "#FFFFFF",
+      "BaseText": "#FFFFFF",
+      "Hint-Text": "#FFFFFF",
+      "CheckBox-Text": "#FFFFFF",
+      "InputValid-Text": "#FFFFFF",
+      "InputDisabled-Text": "#FFFFFF",
+      "TextDropdown": "#D9D9D9",
+      "InfoYouPay-Text": "#FFFFFF",
+      "NextButton-Text-Hover": "#FFFFFF",
+      "ContainerHeader": "#FFFFFF",
+      "Fill-TextLogo-Indacoin": "#FFFFFF",
+
+      
+      "Text-MainInfo": "#242424"
+    }
+  },
+  "dark": {
+    "colorsSettings": {
+      "Background": "transparent",
+      "BackgroundContainer": "transparent",
+      "Shadow-PaymentContainer": "none",
+      "BackBackground": "rgba(0, 0, 0, 0.75)",
+      "ContainerHeader": "#FFFFFF",
+      "Fill-TextLogo-Indacoin": "#FFFFFF",
+      "Input-Border": "#404040",
+      "MenuOverlay-Text": "#FFFFFF",
+      "MenuOverlay-Background": "#202021",
+      "BaseText": "#FFFFFF",
+      "Hint-Background": "#202021",
+      "Hint-Text": "#FFFFFF",
+      "CheckBox-Text": "#FFFFFF",
+      "NextButton-Background-Disabled": "#353B4F",
+      "NextButton-Border-Disabled": "#353B4F",
+      "Input-Background": "rgba(37, 37, 37, 0.5)",
+      "InputValid-Text": "#FFFFFF",
+      "InputDisabled-Text": "#FFFFFF",
+      "InputActive-label": "#FFFFFF",
+      "InputValid-label": "#FFFFFF",
+      "Visible-ContactImg": "none",
+      "BorderDropdown": "#404040",
+      "BackgroundDropdown": "#363636",
+      "BackgroundDropdownDiabled": "#363636",
+      "TextDropdown": "#D9D9D9",
+      "InfoYouPay-Background": "transparent",
+      "InfoYouPay-Border": "#404040",
+      "InfoYouPay-Text": "#FFFFFF",
+      "BackButton-Background": "#252525",
+      "BackButton-Background-Hover": "transparent",
+      "BackButton-Shadow": "0px 0px 4px rgba(172, 172, 172, 0.25) inset",
+      "BackButton-Arrow": "#ECECF1",
+      "BackButton-Arrow-Hover": "#ECECF1"
+    }
+  }
+}

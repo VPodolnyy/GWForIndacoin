@@ -1,0 +1,51 @@
+
+.cardData
+  display: flex
+  flex-direction: column
+  .cardData__header
+    display: flex
+    flex-direction: column
+    h3
+      font-weight: 400
+      font-size: 24px
+      line-height: 33px
+      margin: 15px 0 32px
+      color: var(--ContainerHeader)
+    .cardData__img
+      display: var(--Visible-ContactImg)
+      align-self: center
+      margin: 10px 0 30px
+  .cardData__Inputs
+    display: flex
+    flex-direction: column
+    gap: 32px
+    input
+      border-radius: 8px
+    .rowTop__Input
+      display: flex
+      justify-content: space-between
+      > div
+        &:nth-child(1)
+          flex: 3
+          margin-right: 16px
+        &:nth-child(2)
+          flex: 1
+    .rowBottom__Input
+      display: flex
+      justify-content: space-between
+      > div
+        &:first-child
+          flex: 4
+          margin-right: 16px
+        &:last-child
+          flex: 1
+
+@media (max-width: 760px)
+  .cardData
+    .cardData__header
+      flex-direction: column-reverse
+      h3
+        font-size: 22px
+        line-height: 30px
+        margin: 0 0 32px 0
+// @media (max-width: 500px)

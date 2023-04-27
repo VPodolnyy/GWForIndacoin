@@ -1,0 +1,62 @@
+.PhoneVerification
+  width: 100%
+  h2
+    font-weight: 400
+    font-size: 24px
+    line-height: 33px
+    color: var(--ContainerHeader)
+  h3
+    font-weight: 400
+    font-size: 18px
+    line-height: 25px
+    margin: 24px 0 110px
+    color: var(--ContainerHeader)
+  .pinBlock
+    display: flex
+    justify-content: center
+    margin-bottom: 5px
+    > div
+      display: flex !important
+      gap: 16px
+      input
+        font-family: OpenSans !important
+        border-radius: 8px !important
+        outline: none
+        font-size: 24px !important
+        line-height: 28px
+        padding-left: 0px !important
+        text-align: center
+        box-shadow: none !important
+        margin: 0 !important
+        height: 48px !important
+        width: 48px !important
+        background-color: var(--Input-Background) !important
+        color: var(--InputValid-Text) !important
+        &:focus
+          border: 3px solid var(--Color7) !important
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+  .taimerBlock
+    display: flex
+    justify-content: center
+    text-align: center
+    margin-top: 24px
+    p
+      margin-right: 5px
+      font-weight: 400
+      color: var(--ContainerHeader)
+    span
+      color: var(--Color7)
+    .newCode
+      cursor: pointer
+      color: var(--Color7)
+      &:hover
+        text-decoration: underline
+
+@media (max-width: 420px)
+  .PhoneVerification
+    .pinBlock
+      > div
+        gap: 10px

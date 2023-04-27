@@ -1,0 +1,317 @@
+  .StatusContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 13px;
+    padding: 32px 24px 16px;
+    max-width: 595px;
+    width: 100%;
+    height: 100%;
+    max-height: 628px;
+    box-shadow: 0px 0px 30px rgba(193, 193, 193, 0.25);
+    background-color: var(--BackgroundContainer);
+    .HeaderContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .step {
+        color: var(--Color5);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+      }
+      span {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        color: var(--BaseText);
+        b {
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 34px;
+        }
+      }
+      .help {
+        cursor: pointer;
+      }
+    }
+    .constainerKYC {
+      overflow-y: auto;
+      min-height: 80%;
+      &::-webkit-scrollbar {
+        width: 0px !important;
+      }
+    }
+    > .tgLinkContainer {
+      text-align: center;
+      padding-top: 15px;
+      > a {
+        color: var(--Link);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        > img {
+          margin-bottom: -4px;
+        }
+      }
+    }
+    .StatusCashin {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      height: 100%;
+      .StatusCashin__main {
+        flex: 1 1 auto;
+        .StatusCashin__header {
+          display: flex;
+          flex-direction: column;
+          .StatusCashin__img {
+            align-self: center;
+            margin: 30px 0 20px;
+          }
+        }
+        .StatusCashin__infoOrder {
+          display: flex;
+          margin: 30px 0;
+          .infoOrder__cols {
+            flex: 1;
+            h4 {
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 23px;
+              color: var(--BaseText);
+            }
+            span {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 33px;
+              display: flex;
+              align-items: center;
+              color: var(--BaseText);
+              svg {
+                margin-left: 5px;
+                &:hover {
+                  animation-duration: 1s;
+                  animation-name: rotate;
+                  @keyframes rotate {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .StatusCashin__infoDetails {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 33px;
+          margin-bottom: 10px;
+          color: var(--BaseText);
+        }
+      }
+      button {
+        flex: 0 0 auto;
+      }
+    }
+  }
+@media (max-width: 420px) {
+  .StatusContainer {
+    max-height: none;
+    border-radius: 0;
+    .HeaderContainer {
+      span {
+        font-size: 22px;
+        line-height: 30px;
+        b {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+    .StatusCashin {
+      .StatusCashin__main {
+        .StatusCashin__header {
+          flex-direction: column-reverse;
+          h3 {
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+        .StatusCashin__infoDetails {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+
+
+  .buttonBlock {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: column-reverse;
+      gap: 15px;
+    }
+  }
+  .underLink {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    color: var(--Link);
+    padding-top: 25px;
+    transition: all 0.4s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+.wrapperCheckAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .priceChangeText {
+    margin: 25px 0 20px 0;
+    p {
+      font-style: normal;
+      font-size: 18px;
+      text-align: center;
+      b,
+      span {
+        color: var(--Color7);
+      }
+    }
+  }
+  .buttonBlock {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+  }
+}
+.barsLoader {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  span {
+    display: block;
+    width: 2px;
+    border-radius: 1px;
+    height: 100%;
+    background: var(--Color7);
+    animation: bars 1s infinite;
+    &:nth-child(6) {
+      animation-delay: -0s;
+    }
+    &:nth-child(5) {
+      animation-delay: -0.1s;
+    }
+    &:nth-child(4) {
+      animation-delay: -0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.3s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.4s;
+    }
+    &:nth-child(1) {
+      animation-delay: -0.5s;
+    }
+  }
+  @keyframes bars {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1, 0.3);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+
+.wrapperStatusCashin {
+  display: flex;
+  flex-direction: column;
+  .headerStatus {
+    margin-bottom: 27px;
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 11px;
+      span {
+        color: var(--Color7);
+        font-size: 24px;
+        line-height: 29px;
+      }
+      img {
+        top: 5px;
+        left: 5px;
+        position: relative;
+      }
+    }
+    span {
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--TextPrompt);
+    }
+  }
+  .mainStatus {
+    p {
+      font-size: 12px;
+      line-height: 15px;
+      color: var(--TextPrompt);
+      span {
+        font-size: 12px;
+        line-height: 15px;
+        color: var(--Text);
+      }
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+    }
+  }
+  .footerStatus {
+    > .tgLinkContainer {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      :not(:last-child) {
+        margin-bottom: 11px;
+      }
+      > a {
+        color: var(--Link);
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        > img {
+          margin-bottom: -4px;
+        }
+      }
+    }
+  }
+}
